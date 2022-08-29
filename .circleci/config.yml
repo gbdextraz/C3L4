@@ -28,7 +28,7 @@ jobs:
           name: Run playbook configure
           command: ansible-playbook main_remote.yml -i inventory
   smoke_test:
-    docket:
+    docker:
       - image: alpine:latest
     steps:
       - run: apk add --update curl
