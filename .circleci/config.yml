@@ -20,10 +20,10 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints: ["9c:da:b4:f5:e4:fa:33:2b:bf:58:b4:7b:73:e5:d3:96"]
-      -run:
+      - run:
           name: Install Ansible
           command: apk add --update ansible
-      -run:
+      - run:
           name: Run playbook configure
           command: ansible-playbook main_remote.yml -i inventory
 # Invoke jobs via workflows
